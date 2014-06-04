@@ -36,7 +36,7 @@ public class ValoracionDietetica {
 	inverseJoinColumns=@JoinColumn(name="CODIGO_ALIMENTO"))
 	private Collection <Alimento> alimentosPreferidos = new ArrayList <Alimento> ();
 
-	
+
 	@ManyToMany(cascade=CascadeType.ALL)
     @JoinTable (name="ALIMENTO_VALORACION_DIETETICA", joinColumns=@JoinColumn(name="CODIGO_VALORACION_DIETETICA"),
 	inverseJoinColumns=@JoinColumn(name="CODIGO_ALIMENTO"))

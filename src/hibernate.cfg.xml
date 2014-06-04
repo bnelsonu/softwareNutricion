@@ -28,6 +28,7 @@
 	    <mapping class="com.nutricion.domain.Meta"/>
 	    <mapping class="com.nutricion.domain.Suplemento"/>
 	    <mapping class="com.nutricion.domain.Telefono"/>
+	    <mapping class="com.nutricion.domain.TipoAlimento"/>
 	    <mapping class="com.nutricion.domain.ValoracionDietetica"/>	           
     </session-factory>
 </hibernate-configuration>

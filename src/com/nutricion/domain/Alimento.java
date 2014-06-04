@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -34,6 +35,9 @@ public class Alimento {
 	inverseJoinColumns=@JoinColumn(name="CODIGO_VALORACION_DIETETICA"))
 	private Collection <ValoracionDietetica> valoracionDieteticas = new ArrayList <ValoracionDietetica> ();
 
+    @ManyToOne
+	@JoinColumn(name="codigoTipoAlimento")
+	private TipoAlimento tipoAlimento;
 	
 	public int getCodigoAlimento() {
 		return codigoAlimento;
@@ -53,5 +57,11 @@ public class Alimento {
 	public void setValoracionDieteticas(
 			Collection<ValoracionDietetica> valoracionDieteticas) {
 		this.valoracionDieteticas = valoracionDieteticas;
+	}
+	public TipoAlimento getTipoAlimento() {
+		return tipoAlimento;
+	}
+	public void setTipoAlimento(TipoAlimento tipoAlimento) {
+		this.tipoAlimento = tipoAlimento;
 	}
 }

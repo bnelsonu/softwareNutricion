@@ -10,6 +10,7 @@ import com.nutricion.domain.ConductasRelSalud;
 import com.nutricion.domain.HistoriaClinicaFamiliar;
 import com.nutricion.domain.HistoriaClinicaPersonal;
 import com.nutricion.domain.Telefono;
+import com.nutricion.domain.TipoAlimento;
 import com.nutricion.domain.ValoracionDietetica;
 
 public class DomainTest {
@@ -117,16 +118,29 @@ public class DomainTest {
 				"duras como una cancha sintetica");
 		cliente.setConductasRelSalud(conductasRelSalud);
 		
+		
+		
 		//valoracion dietetica
-         Alimento alimentoPreferido1 = new Alimento ();
+		TipoAlimento alimentoNoConsumido = new TipoAlimento();
+		TipoAlimento alimentoPreferido = new TipoAlimento();
+		
+		alimentoNoConsumido.setNombreTipoAlimento("Alimento no consumido");
+		alimentoPreferido.setNombreTipoAlimento("Alimento preferido");
+		
+		session.save(alimentoNoConsumido);
+		session.save(alimentoPreferido);
+		
+		Alimento alimentoPreferido1 = new Alimento ();
 		alimentoPreferido1.setNombreAlimento("filet de res");
+		alimentoPreferido1.setTipoAlimento(alimentoPreferido);
 	
 		Alimento alimentoPreferido2 = new Alimento ();
 		alimentoPreferido2.setNombreAlimento("ensalada");
+		alimentoPreferido2.setTipoAlimento(alimentoPreferido);
 		
 		Alimento alimentoNoConsumido1 = new Alimento ();
 		alimentoNoConsumido1.setNombreAlimento("lentejas");
-		
+		alimentoNoConsumido1.setTipoAlimento(alimentoNoConsumido);
 			
 		ValoracionDietetica valoracionDietetica = new ValoracionDietetica();
 		valoracionDietetica.setPreparadorAlimentos("Empleada Domestica");
