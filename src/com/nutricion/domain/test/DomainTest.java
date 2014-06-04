@@ -136,9 +136,7 @@ public class DomainTest {
 		valoracionDietetica.getAlimentosPreferidos().add(alimentoPreferido2);
 		
 		valoracionDietetica.getAlimentosQueNoConsume().add(alimentoNoConsumido1);
-		
-		//session.save(valoracionDietetica);
-		
+			
 		cliente.setValoracionDietetica(valoracionDietetica);
 		
 		session.save(cliente);
