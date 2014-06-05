@@ -62,7 +62,7 @@ public class DomainTest {
 		historiaClinicaFamiliar.setOsteoporosis(false);
 		historiaClinicaFamiliar.setTiroides(false);
 		historiaClinicaFamiliar.setCa(true);
-		historiaClinicaFamiliar.setOtros("Diabetes en familiares: padre y abuelos");
+		historiaClinicaFamiliar.setOtros("Diabetes en familiares: padre y abuelo");
 		
 		cliente.setHistoriaClinicaFamiliar(historiaClinicaFamiliar);
 		
