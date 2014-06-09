@@ -22,7 +22,7 @@ public class Medicamento {
 	private int codigoMedicamento;
 	
 	@Column(name="NOMBRE_MEDICAMENTO")
-	private int nombreMedicamento;
+	private String nombreMedicamento;
 	
 	@ManyToMany
 	@JoinTable (name="CLIENTE_MEDICAMENTO", joinColumns=@JoinColumn(name="CODIGO_MEDICAMENTO"),
@@ -35,10 +35,10 @@ public class Medicamento {
 	public void setCodigoMedicamento(int codigoMedicamento) {
 		this.codigoMedicamento = codigoMedicamento;
 	}
-	public int getNombreMedicamento() {
+	public String getNombreMedicamento() {
 		return nombreMedicamento;
 	}
-	public void setNombreMedicamento(int nombreMedicamento) {
+	public void setNombreMedicamento(String nombreMedicamento) {
 		this.nombreMedicamento = nombreMedicamento;
 	}
 	public Collection<Cliente> getClientes() {

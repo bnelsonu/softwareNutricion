@@ -56,6 +56,8 @@ public class Cliente {
     private ValoracionDietetica valoracionDietetica;
     @OneToOne(mappedBy="cliente", cascade=CascadeType.ALL)
     private ConductasRelSalud conductasRelSalud;
+    @OneToOne(mappedBy="cliente", cascade=CascadeType.ALL)
+    private AlimentacionaEvaluar alimentacionaEvaluar;
 	
     @ManyToMany(cascade=CascadeType.ALL)
 	@JoinTable (name="CLIENTE_TELEFONO", joinColumns=@JoinColumn(name="CODIGO_CLIENTE"),
@@ -222,5 +224,11 @@ public class Cliente {
 	}
 	public void setMetas(Collection<Meta> metas) {
 		this.metas = metas;
+	}
+	public AlimentacionaEvaluar getAlimentacionaEvaluar() {
+		return alimentacionaEvaluar;
+	}
+	public void setAlimentacionaEvaluar(AlimentacionaEvaluar alimentacionaEvaluar) {
+		this.alimentacionaEvaluar = alimentacionaEvaluar;
 	}
 }

@@ -15,7 +15,7 @@ public class Meta {
 	
 	@Id @GeneratedValue (strategy=GenerationType.IDENTITY)
 	@Column(name="CODIGO_META")
-	private String codigoMeta;
+	private int codigoMeta;
 	
 	@Column(name="DESCRIPCION")
 	private String descripcion;
@@ -24,10 +24,10 @@ public class Meta {
 	@JoinColumn(name="codigoCliente")
 	private Cliente cliente;
 	
-	public String getCodigoMeta() {
+	public int getCodigoMeta() {
 		return codigoMeta;
 	}
-	public void setCodigoMeta(String codigoMeta) {
+	public void setCodigoMeta(int codigoMeta) {
 		this.codigoMeta = codigoMeta;
 	}
 	public String getDescripcion() {
