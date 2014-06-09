@@ -8,10 +8,12 @@ import com.nutricion.domain.AlimentacionaEvaluar;
 import com.nutricion.domain.Alimento;
 import com.nutricion.domain.Cliente;
 import com.nutricion.domain.ConductasRelSalud;
+import com.nutricion.domain.Ejercicio;
 import com.nutricion.domain.HistoriaClinicaFamiliar;
 import com.nutricion.domain.HistoriaClinicaPersonal;
 import com.nutricion.domain.Medicamento;
 import com.nutricion.domain.Meta;
+import com.nutricion.domain.Suplemento;
 import com.nutricion.domain.Telefono;
 import com.nutricion.domain.TipoAlimento;
 import com.nutricion.domain.ValoracionDietetica;
@@ -54,6 +56,21 @@ public class DomainTest {
 		cliente.getTelefonos().add(telefono2);
 		cliente.getTelefonos().add(telefono3);
 		
+		
+		//ejercicios
+		Ejercicio ejercicio1 = new Ejercicio();
+		ejercicio1.setDescripcion("soccer");
+		
+		Ejercicio ejercicio2 = new Ejercicio();
+		ejercicio2.setDescripcion("natacion");
+		
+		
+		cliente.getEjercicios().add(ejercicio1);
+		cliente.getEjercicios().add(ejercicio2);
+				
+		
+		
+		
 		//metas
 		Meta meta1 = new Meta();
 		meta1.setDescripcion("Hipertrofia muscular");
@@ -67,18 +84,6 @@ public class DomainTest {
 		meta1.setCliente(cliente);
 		meta2.setCliente(cliente);
 			
-	
-		//suplementos
-		
-	/*	Suplemento suplemento1 = new Suplemento();
-		suplemento1.setNombreSuplemento("Whey Protein");
-		
-		Suplemento suplemento2 = new Suplemento();
-		suplemento2.setNombreSuplemento("L Carnitina");
-		
-		cliente.getSuplementos().add(suplemento1);
-		cliente.getSuplementos().add(suplemento2);*/
-		
 		
 		//medicamentos
 		
@@ -90,6 +95,17 @@ public class DomainTest {
 		
 		cliente.getMedicamentos().add(medicamento1);
 		cliente.getMedicamentos().add(medicamento2);
+		
+		//suplementos
+		
+	    Suplemento suplemento1 = new Suplemento();
+		suplemento1.setNombreSuplemento("Whey");
+		
+		Suplemento suplemento2 = new Suplemento();
+		suplemento2.setNombreSuplemento("L Carnitina");
+		
+		cliente.getSuplementos().add(suplemento1);
+		cliente.getSuplementos().add(suplemento2);
 	
 		//Historia clinica familiar
 		

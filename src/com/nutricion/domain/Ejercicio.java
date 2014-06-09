@@ -26,8 +26,8 @@ public class Ejercicio {
 	private String descripcion;
 
 	@ManyToMany
-	@JoinTable (name="CLIENTE_SUPLEMENTO", joinColumns=@JoinColumn(name="codigoSuplemento"),
-	inverseJoinColumns=@JoinColumn(name="codigoCliente"))
+	@JoinTable (name="CLIENTE_EJERCICIO", joinColumns=@JoinColumn(name="CODIGO_EJERCICIO"),
+	inverseJoinColumns=@JoinColumn(name="CODIGO_CLIENTE"))
 	private Collection <Cliente> clientes = new ArrayList <Cliente> ();
 	
 	

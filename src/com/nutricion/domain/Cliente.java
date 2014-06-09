@@ -72,7 +72,7 @@ public class Cliente {
     @ManyToMany(cascade=CascadeType.ALL)
    	@JoinTable (name="CLIENTE_SUPLEMENTO", joinColumns=@JoinColumn(name="CODIGO_CLIENTE"),
    	inverseJoinColumns=@JoinColumn(name="CODIGO_SUPLEMENTO"))
-	private Collection <Suplemento> suplementos = new ArrayList <Suplemento> ();
+    private Collection <Suplemento> suplementos = new ArrayList <Suplemento> ();
 	
     @ManyToMany(cascade=CascadeType.ALL)
    	@JoinTable (name="CLIENTE_EJERCICIO", joinColumns=@JoinColumn(name="CODIGO_CLIENTE"),
@@ -201,12 +201,6 @@ public class Cliente {
 	public void setMedicamentos(Collection<Medicamento> medicamentos) {
 		this.medicamentos = medicamentos;
 	}
-	public Collection<Suplemento> getSuplementos() {
-		return suplementos;
-	}
-	public void setSuplementos(Collection<Suplemento> suplementos) {
-		this.suplementos = suplementos;
-	}
 	public Collection<Ejercicio> getEjercicios() {
 		return ejercicios;
 	}
@@ -230,5 +224,11 @@ public class Cliente {
 	}
 	public void setAlimentacionaEvaluar(AlimentacionaEvaluar alimentacionaEvaluar) {
 		this.alimentacionaEvaluar = alimentacionaEvaluar;
+	}
+	public Collection<Suplemento> getSuplementos() {
+		return suplementos;
+	}
+	public void setSuplementos(Collection<Suplemento> suplementos) {
+		this.suplementos = suplementos;
 	}
 }
