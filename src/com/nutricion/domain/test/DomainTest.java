@@ -31,18 +31,26 @@ public class DomainTest {
 		session.beginTransaction();
 		
 		Cliente cliente = new Cliente();
+		
+		/****Datos Generales*****/
+		//1. Nombre
 		cliente.setNombre("Brian");
 		cliente.setApellido1("Nelson");
 		cliente.setApellido2("Ulloa");
-		cliente.setEdad(25);
-		cliente.setOcupacion("Ing en informatica");
-		cliente.setLugarTrabajo("Accenture");
-		cliente.setFumado(false);
-		cliente.setBebidasAlcoholicas(false);
-		cliente.setFrecuenciaEjercicio("4 veces a la samana");
+		
+		//2. Edad	
+		cliente.setEdad(30);
+		
+		//3.Nacionalidad
+		cliente.setNacionaldidad("Costarricense");
+		
+		//4.Ocupacion
+		cliente.setOcupacion("Ing. en informatica");
+		
+		//5.Correo
 		cliente.setCorreo("bricardonelson@gmail.com");
 		
-		//telefonos
+		//6.Telefonos
 		Telefono telefono1 = new Telefono();
 		telefono1.setNumeroTelefono("5564833");
 		
@@ -57,21 +65,57 @@ public class DomainTest {
 		cliente.getTelefonos().add(telefono3);
 		
 		
-		//ejercicios
+		//7.Medicamentos
+		
+		Medicamento medicamento1 = new Medicamento();
+		medicamento1.setNombreMedicamento("pastilla para insomnio");
+				
+		Medicamento medicamento2 = new Medicamento();
+		medicamento2.setNombreMedicamento("pastillas para la gastritis");
+		
+		cliente.getMedicamentos().add(medicamento1);
+		cliente.getMedicamentos().add(medicamento2);
+		
+		//8.Suplementos
+		
+	    Suplemento suplemento1 = new Suplemento();
+		suplemento1.setNombreSuplemento("Whey");
+		
+		Suplemento suplemento2 = new Suplemento();
+		suplemento2.setNombreSuplemento("L Carnitina");
+		
+		cliente.getSuplementos().add(suplemento1);
+		cliente.getSuplementos().add(suplemento2);
+		
+		//9. Fumado
+		cliente.setFumado(false);
+		
+		//10.Bebidas Alcoholicas
+		cliente.setBebidasAlcoholicas(false);
+		
+		
+		//11.Lugar de trabajo
+		cliente.setLugarTrabajo("Accenture");
+		
+		//12.Ejercicios
 		Ejercicio ejercicio1 = new Ejercicio();
 		ejercicio1.setDescripcion("soccer");
+		ejercicio1.setTipo("Deporte");
 		
 		Ejercicio ejercicio2 = new Ejercicio();
 		ejercicio2.setDescripcion("natacion");
-		
+		ejercicio2.setTipo("Deporte");
 		
 		cliente.getEjercicios().add(ejercicio1);
 		cliente.getEjercicios().add(ejercicio2);
+		
+		//13.Frecuencia de Ejercicio
+		cliente.setFrecuenciaEjercicio("4 veces a la semana");
+		
+		//14. Estilo de Vida		
+		cliente.setEstiloVida("Activo");
 				
-		
-		
-		
-		//metas
+		//15.Observaciones / Metas
 		Meta meta1 = new Meta();
 		meta1.setDescripcion("Hipertrofia muscular");
 		Meta meta2 = new Meta();
@@ -85,29 +129,7 @@ public class DomainTest {
 		meta2.setCliente(cliente);
 			
 		
-		//medicamentos
-		
-		Medicamento medicamento1 = new Medicamento();
-		medicamento1.setNombreMedicamento("pastilla para insomnio");
-		
-		Medicamento medicamento2 = new Medicamento();
-		medicamento2.setNombreMedicamento("pastillas para la gastritis");
-		
-		cliente.getMedicamentos().add(medicamento1);
-		cliente.getMedicamentos().add(medicamento2);
-		
-		//suplementos
-		
-	    Suplemento suplemento1 = new Suplemento();
-		suplemento1.setNombreSuplemento("Whey");
-		
-		Suplemento suplemento2 = new Suplemento();
-		suplemento2.setNombreSuplemento("L Carnitina");
-		
-		cliente.getSuplementos().add(suplemento1);
-		cliente.getSuplementos().add(suplemento2);
-	
-		//Historia clinica familiar
+		/****Historia clinica familiar*****/
 		
 		HistoriaClinicaFamiliar historiaClinicaFamiliar = new HistoriaClinicaFamiliar();
 		historiaClinicaFamiliar.setProblemasCardioVasculares(false);
@@ -122,9 +144,10 @@ public class DomainTest {
 		historiaClinicaFamiliar.setOtros("Diabetes en familiares: padre y abuelo");
 		
 		cliente.setHistoriaClinicaFamiliar(historiaClinicaFamiliar);
+		historiaClinicaFamiliar.setCliente(cliente);
 		
-		//Historia clinica personal
-		
+		/****Historia clinica personal*****/
+
 		HistoriaClinicaPersonal historiaClinicaPersonal =  new HistoriaClinicaPersonal();
 		historiaClinicaPersonal.setAcidoUrico(false);
 		historiaClinicaPersonal.setAlergiasIntolerancia(false);
@@ -164,9 +187,10 @@ public class DomainTest {
 		historiaClinicaPersonal.setOtros("Operacion de apendice en la adolecencia");
 		
 		cliente.setHistoriaClinicaPersonal(historiaClinicaPersonal);
+		historiaClinicaPersonal.setCliente(cliente);
 		
+		/**Conductas relacionadas con la salud*/
 		
-		//Conductas relacionadas con la salud
 		ConductasRelSalud conductasRelSalud =  new ConductasRelSalud();
 		conductasRelSalud.setDesmayos("presenta desmayos cuando realiza ejercicios de manera prolongada y " +
 				"su alimentacion no es la adecuada");
@@ -174,10 +198,9 @@ public class DomainTest {
 				"exceso como por ejemplo 3 mejengas por semana, esto se da en superficies relativamente" +
 				"duras como una cancha sintetica");
 		cliente.setConductasRelSalud(conductasRelSalud);
+		conductasRelSalud.setCliente(cliente);
 		
-		
-		
-		//valoracion dietetica
+		/**Valoracion dietetica*/
 		
 		//Tipo alimento no consumido
 		TipoAlimento alimentoNoConsumido = new TipoAlimento();
@@ -209,8 +232,7 @@ public class DomainTest {
 		
 		ValoracionDietetica valoracionDietetica = new ValoracionDietetica();
 		valoracionDietetica.setPreparadorAlimentos("Empleada Domestica");
-		
-		
+				
 		valoracionDietetica.getAlimentosPreferidos().add(alimentoPreferido1);
 		valoracionDietetica.getAlimentosPreferidos().add(alimentoPreferido2);
 		
@@ -218,9 +240,10 @@ public class DomainTest {
 		
 		//anadir valoracion dietica al cliente	
 		cliente.setValoracionDietetica(valoracionDietetica);
+		valoracionDietetica.setCliente(cliente);
 		
 		
-		//alimentacion de dia a evaluar
+		/*Alimentacion de dia a evaluar*/
 		
 		AlimentacionaEvaluar alimentacionaEvaluar = new AlimentacionaEvaluar();
 		alimentacionaEvaluar.setDesayuno("1 tostada con jamon de pavo, 1 manzana");
@@ -235,6 +258,7 @@ public class DomainTest {
 		alimentacionaEvaluar.setHidratacion("2 litros de agua en todo el dia, tomo varias veces agua cuando hago ejercicio");
 		
 		cliente.setAlimentacionaEvaluar(alimentacionaEvaluar);
+		alimentacionaEvaluar.setCliente(cliente);
 		
 		session.save(cliente);
 		session.getTransaction().commit();

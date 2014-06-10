@@ -13,7 +13,6 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Entity
@@ -27,9 +26,10 @@ public class ValoracionDietetica {
 	@Column(name="PREPARADOR_ALIMENTOS")
 	private String preparadorAlimentos;
 	
-	@OneToOne
-    @PrimaryKeyJoinColumn
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name="CODIGO_CLIENTE")
 	private Cliente cliente;
+
 	
 	@ManyToMany(cascade=CascadeType.ALL)
     @JoinTable (name="ALIMENTO_VALORACION_DIETETICA", joinColumns=@JoinColumn(name="CODIGO_VALORACION_DIETETICA"),
