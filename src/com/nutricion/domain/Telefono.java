@@ -3,6 +3,7 @@ package com.nutricion.domain;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -24,7 +25,7 @@ public class Telefono {
 	@Column(name="NUMERO_TELEFONO")
 	private String numeroTelefono;
 	
-	@ManyToMany
+	@ManyToMany(cascade=CascadeType.ALL)
 	@JoinTable (name="CLIENTE_TELEFONO", joinColumns=@JoinColumn(name="CODIGO_TELEFONO"),
 	inverseJoinColumns=@JoinColumn(name="CODIGO_CLIENTE"))
 	private Collection <Cliente> clientes = new ArrayList <Cliente> ();

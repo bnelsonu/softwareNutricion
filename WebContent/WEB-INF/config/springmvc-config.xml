@@ -14,8 +14,8 @@
    http://www.springframework.org/schema/mvc   
    http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">  
     
-    <context:component-scan base-package="com.nutricion"/>    
-
+    <context:component-scan base-package="com.nutricion.domain"/>    
+<context:component-scan base-package="com.nutricion.controller"/>  
      
     <mvc:annotation-driven/>
     <mvc:resources mapping="/css/**" location="/css/"/>
@@ -44,6 +44,7 @@
   <property name="annotatedClasses">  
    <list>  
    	   <value>com.nutricion.domain.Cliente</value>
+   	   <value>com.nutricion.domain.Telefono</value>
    	   <value>com.nutricion.domain.AlimentacionaEvaluar</value>
 	   <value>com.nutricion.domain.Alimento</value>
 	   <value>com.nutricion.domain.ConductasRelSalud</value>
@@ -54,7 +55,6 @@
 	   <value>com.nutricion.domain.Medicamento</value>
 	   <value>com.nutricion.domain.Meta</value>
 	   <value>com.nutricion.domain.Suplemento</value>
-	   <value>com.nutricion.domain.Telefono"</value>
 	   <value>com.nutricion.domain.TipoAlimento</value>
 	   <value>com.nutricion.domain.ValoracionDietetica</value> 
    </list>  
