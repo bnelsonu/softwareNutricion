@@ -28,9 +28,13 @@
             <form:input id="edad" path="edad"/>
         </p>
         <p>
-            <label for="nacionalidad">Nacionalidad: </label>
-            <form:input id="nacionalidad" path="nacionalidad"/>
+             <label for="nacionalidad">Nacionalidad:</label>
+    		<form:select id="nacionalidad" path="nacionalidad" >
+			
+				<form:options items="${nacionalidades}" />
+			</form:select>
         </p>
+        
         <p>
             <label for="ocupacion">Ocupaci&oacute;n: </label>
             <form:input id="ocupacion" path="ocupacion"/>
@@ -59,8 +63,8 @@
         </p>
 
          <p>
-            <label for="bebidasAlcoholicas">Bebidas Alcoholicas:</label>
-            <form:select id="bebidasAlcoholicas" path="bebidasAlcoh&oacute;licas" >
+            <label for="bebidasAlcoholicas">Bebidas Alcoh&oacute;licas:</label>
+            <form:select id="bebidasAlcoholicas" path="bebidasAlcoholicas" >
 	            <option value="true">S&iacute;</option>
 	            <option value="false">No</option>
             </form:select>
