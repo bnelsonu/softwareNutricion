@@ -1,8 +1,8 @@
-package com.nutricion.service;
+package com.nutricion.dao;
 
 import com.nutricion.domain.Cliente;
 
-public interface ClienteService {
+public interface ClienteDAO {
 
 	public void saveCliente(Cliente cliente);
 }

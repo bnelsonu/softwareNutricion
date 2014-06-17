@@ -35,10 +35,21 @@
             <label for="ocupacion">Ocupacion: </label>
             <form:input id="ocupacion" path="ocupacion"/>
         </p>
-        <p>
-            <label for="lugarTrabajo">Lugar De Trabajo: </label>
-            <form:input id="lugarTrabajo" path="lugarTrabajo"/>
-        </p>
+                  
+                          
+		     <p>
+		            <label for="telefono1">Telefono 1: </label>
+		            <form:input id="telefono1" path="telefonos[0].numeroTelefono"/>
+		        </p>
+		         <p>
+		            <label for="telefono2">Telefono 2: </label>
+		            <form:input id="telefono2" path="telefonos[1].numeroTelefono"/>
+		        </p>
+		         <p>
+		            <label for="telefono3">Telefono 3: </label>
+		            <form:input id="telefono3" path="telefonos[2].numeroTelefono"/>
+		         </p>
+		              
         <p>
             <label for="fumado">Fumado: </label>
             <form:input id="fumado" path="fumado" />

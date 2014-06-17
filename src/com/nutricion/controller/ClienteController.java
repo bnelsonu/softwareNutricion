@@ -12,20 +12,24 @@ import com.nutricion.service.ClienteService;
 @Controller
 public class ClienteController {
 
-  /* @Autowired
-	private ClienteService clienteService;*/
+    @Autowired
+	private ClienteService clienteService;
 
 	
 	@RequestMapping(value = "/saveCliente")
     public String saveCliente(@ModelAttribute Cliente cliente) {
-      
+		
+		clienteService.saveCliente(cliente);
         return "showCliente";
     }
 	
 	 @RequestMapping(value = "/showCliente")
-	    public String showCliente(Model model) {
-	       model.addAttribute("cliente",new Cliente());
-	        return "showCliente";
+	    public String showCliente(Model model, Cliente cliente) {
+		 
+		 	
+		    model.addAttribute("cliente",new Cliente());
+	      
+		    return "showCliente";
 	    }
 
 }

@@ -23,7 +23,6 @@ public class DomainTest {
 	/**
 	 * @param args
 	 */
-	@SuppressWarnings("deprecation")
 	public static void main(String[] args) {
 		
 		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
