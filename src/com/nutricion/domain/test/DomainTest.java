@@ -42,7 +42,7 @@ public class DomainTest {
 		cliente.setEdad(30);
 		
 		//3.Nacionalidad
-		cliente.setNacionaldidad("Costarricense");
+		cliente.setNacionalidad("Costarricense");
 		
 		//4.Ocupacion
 		cliente.setOcupacion("Ing. en informatica");

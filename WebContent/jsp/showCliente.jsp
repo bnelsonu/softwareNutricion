@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="global">
-<form:form commandName="book" action="book_save" method="post">
+<form:form action="saveCliente" commandName="cliente" method="post">
     <fieldset>
         <legend>Anadir Cliente</legend>
         <p>
@@ -17,11 +17,11 @@
         </p>
         <p>
             <label for="apellido1">Primer Apellido: </label>
-            <form:input id="author" path="author"/>
+            <form:input id="author" path="apellido1"/>
         </p>
        <p>
             <label for="apellido2">Segundo Apellido: </label>
-            <form:input id="author" path="author"/>
+            <form:input id="apellido2" path="apellido2"/>
         </p>
         <p>
             <label for="edad">Edad: </label>
@@ -41,12 +41,9 @@
         </p>
         <p>
             <label for="fumado">Fumado: </label>
-            <form:input id="author" path="author"/>
+            <form:input id="fumado" path="fumado" />
         </p>
-        <p>
-            <label for="apellido1">Primer Apellido: </label>
-            <form:input id="author" path="author"/>
-        </p>
+      
         
         <p id="buttons">
             <input id="reset" type="reset" tabindex="4">

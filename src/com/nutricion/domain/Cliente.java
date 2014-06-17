@@ -32,7 +32,7 @@ public class Cliente {
 	@Column(name="EDAD")
 	private int edad;
 	@Column(name="NACIONALIDAD")
-	private String nacionaldidad;
+	private String nacionalidad;
 	@Column(name="OCUPACION")
 	private String ocupacion;
 	@Column(name="LUGAR_TRABAJO")
@@ -115,11 +115,11 @@ public class Cliente {
 	public void setEdad(int edad) {
 		this.edad = edad;
 	}
-	public String getNacionaldidad() {
-		return nacionaldidad;
+	public String getNacionalidad() {
+		return nacionalidad;
 	}
-	public void setNacionaldidad(String nacionaldidad) {
-		this.nacionaldidad = nacionaldidad;
+	public void setNacionalidad(String nacionalidad) {
+		this.nacionalidad = nacionalidad;
 	}
 	public String getOcupacion() {
 		return ocupacion;
