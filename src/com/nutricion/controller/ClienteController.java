@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.nutricion.domain.Cliente;
 import com.nutricion.service.ClienteService;
 
+
 @Controller
 public class ClienteController {
 
@@ -25,10 +26,9 @@ public class ClienteController {
 	
 	 @RequestMapping(value = "/showCliente")
 	    public String showCliente(Model model, Cliente cliente) {
-		 
 		 	
 		    model.addAttribute("cliente",new Cliente());
-	      
+		   
 		    return "showCliente";
 	    }
 

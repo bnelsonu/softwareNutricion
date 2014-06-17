@@ -10,7 +10,7 @@
 <div id="global">
 <form:form action="saveCliente" commandName="cliente" method="post">
     <fieldset>
-        <legend>Anadir Cliente</legend>
+        <legend>A&ntilde;adir Cliente</legend>
         <p>
             <label for="nombre">Nombre: </label>
             <form:input id="nombre" path="nombre"/>
@@ -32,29 +32,40 @@
             <form:input id="nacionalidad" path="nacionalidad"/>
         </p>
         <p>
-            <label for="ocupacion">Ocupacion: </label>
+            <label for="ocupacion">Ocupaci&oacute;n: </label>
             <form:input id="ocupacion" path="ocupacion"/>
-        </p>
-                  
-                          
-		     <p>
-		            <label for="telefono1">Telefono 1: </label>
-		            <form:input id="telefono1" path="telefonos[0].numeroTelefono"/>
-		        </p>
-		         <p>
-		            <label for="telefono2">Telefono 2: </label>
-		            <form:input id="telefono2" path="telefonos[1].numeroTelefono"/>
-		        </p>
-		         <p>
-		            <label for="telefono3">Telefono 3: </label>
-		            <form:input id="telefono3" path="telefonos[2].numeroTelefono"/>
-		         </p>
-		              
-        <p>
+        </p>                   
+   	    <p>
+           <label for="telefono1">Tel&eacute;fono 1: </label>
+           <form:input id="telefono1" path="telefonos[0].numeroTelefono" />
+        </p> 
+	    <div id="telefonosAlternativos">
+	        <p>
+	           <label for="telefono2">Tel&eacute;fono 2: </label>
+	           <form:input id="telefono2" path="telefonos[1].numeroTelefono"/>
+	        </p>
+	        <p>
+	           <label for="telefono3">Tel&eacute;fono 3: </label>
+	           <form:input id="telefono3" path="telefonos[2].numeroTelefono"/>
+	        </p>
+		</div>       
+             
+         <p>
             <label for="fumado">Fumado: </label>
-            <form:input id="fumado" path="fumado" />
+            <form:select id="fumado" path="fumado" >
+	            <option value="true">S&iacute;</option>
+	            <option value="false">No</option>
+            </form:select>
         </p>
-      
+
+         <p>
+            <label for="bebidasAlcoholicas">Bebidas Alcoholicas:</label>
+            <form:select id="bebidasAlcoholicas" path="bebidasAlcoh&oacute;licas" >
+	            <option value="true">S&iacute;</option>
+	            <option value="false">No</option>
+            </form:select>
+        </p>
+     
         
         <p id="buttons">
             <input id="reset" type="reset" tabindex="4">
