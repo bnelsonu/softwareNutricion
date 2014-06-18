@@ -17,7 +17,7 @@
         </p>
         <p>
             <label for="apellido1">Primer Apellido: </label>
-            <form:input id="author" path="apellido1"/>
+            <form:input id="apellido1" path="apellido1"/>
         </p>
        <p>
             <label for="apellido2">Segundo Apellido: </label>
