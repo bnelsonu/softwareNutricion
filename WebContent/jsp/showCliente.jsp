@@ -4,8 +4,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<script src="/SoftwareNutricion/js/main.js"> </script>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
+<script src="/SoftwareNutricion/js/main.js"> </script>
 <style type="text/css">@import url("<c:url value="/css/main.css"/>");</style>
 <title>Anadir Cliente</title>
 </head>
@@ -45,7 +46,7 @@
    	    <p>
            <label for="telefono1">Tel&eacute;fono 1: </label>
            <form:input id="telefono1" path="telefonos[0].numeroTelefono" />
-            <form:button id="btnTelefonosAlternativos" type="button" class="alternativeBtns"   value="+"  onclick="showTelefonosAlternativos()"/>
+            <form:button id="btnTelefonosAlternativos" type="button" class="alternativeBtns" >+</form:button>
         </p> 
 	    <div id="telefonosAlternativos" class="hidden">
 	        <p>
