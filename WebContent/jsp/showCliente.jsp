@@ -1,10 +1,13 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Anadir Cliente</title>
+<script src="/SoftwareNutricion/js/main.js"> </script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
 <style type="text/css">@import url("<c:url value="/css/main.css"/>");</style>
+<title>Anadir Cliente</title>
 </head>
 <body>
 <div id="global">
@@ -42,8 +45,9 @@
    	    <p>
            <label for="telefono1">Tel&eacute;fono 1: </label>
            <form:input id="telefono1" path="telefonos[0].numeroTelefono" />
+            <form:button id="btnTelefonosAlternativos" type="button" class="alternativeBtns"   value="+"  onclick="showTelefonosAlternativos()"/>
         </p> 
-	    <div id="telefonosAlternativos">
+	    <div id="telefonosAlternativos" class="hidden">
 	        <p>
 	           <label for="telefono2">Tel&eacute;fono 2: </label>
 	           <form:input id="telefono2" path="telefonos[1].numeroTelefono"/>
@@ -57,16 +61,16 @@
          <p>
             <label for="fumado">Fumado: </label>
             <form:select id="fumado" path="fumado" >
-	            <option value="true">S&iacute;</option>
 	            <option value="false">No</option>
+	            <option value="true">S&iacute;</option>
             </form:select>
         </p>
 
          <p>
             <label for="bebidasAlcoholicas">Bebidas Alcoh&oacute;licas:</label>
             <form:select id="bebidasAlcoholicas" path="bebidasAlcoholicas" >
-	            <option value="true">S&iacute;</option>
 	            <option value="false">No</option>
+	            <option value="true">S&iacute;</option>
             </form:select>
         </p>
      
