@@ -15,6 +15,8 @@
 <form:form action="saveCliente" commandName="cliente" method="post">
     <fieldset>
         <legend>A&ntilde;adir Cliente</legend>
+       
+       <div id="bloque1">
         <p>
             <label for="nombre">Nombre: </label>
             <form:input id="nombre" path="nombre"/>
@@ -34,17 +36,20 @@
         <p>
              <label for="nacionalidad">Nacionalidad:</label>
     		<form:select id="nacionalidad" path="nacionalidad" >
-			
+
 				<form:options items="${nacionalidades}" />
 			</form:select>
-        </p>
-        
+        </p> 
         <p>
             <label for="ocupacion">Ocupaci&oacute;n: </label>
             <form:input id="ocupacion" path="ocupacion"/>
-        </p>                   
+        </p>
+         <p>
+            <label for="correo">Correo: </label>
+            <form:input id="correo" path="correo"/>
+        </p>          
    	    <p>
-           <label for="telefono1">Tel&eacute;fono 1: </label>
+           <label id= "lbtelefono1" for="telefono1">Tel&eacute;fono</label>
            <form:input id="telefono1" path="telefonos[0].numeroTelefono" />
             <form:button id="btnTelefonosAlternativos" type="button" class="alternativeBtns" >+</form:button>
         </p> 
@@ -74,13 +79,60 @@
 	            <option value="true">S&iacute;</option>
             </form:select>
         </p>
+     </div>
      
+     <div id="bloque2">
+     	   <p>
+            <label for="nombre">Nombre: </label>
+            <form:input id="nombre" path="nombre"/>
+        </p>
+        <p>
+            <label for="apellido1">Primer Apellido: </label>
+            <form:input id="apellido1" path="apellido1"/>
+        </p>
+       <p>
+            <label for="apellido2">Segundo Apellido: </label>
+            <form:input id="apellido2" path="apellido2"/>
+        </p>
+        <p>
+            <label for="edad">Edad: </label>
+            <form:input id="edad" path="edad"/>
+        </p>
+        <p>
+             <label for="nacionalidad">Nacionalidad:</label>
+    		<form:select id="nacionalidad" path="nacionalidad" >
+
+				<form:options items="${nacionalidades}" />
+			</form:select>
+        </p>
         
-        <p id="buttons">
+        <p>
+            <label for="ocupacion">Ocupaci&oacute;n: </label>
+            <form:input id="ocupacion" path="ocupacion"/>
+        </p>                   
+         <p>
+            <label for="fumado">Fumado: </label>
+            <form:select id="fumado" path="fumado" >
+	            <option value="false">No</option>
+	            <option value="true">S&iacute;</option>
+            </form:select>
+        </p>
+
+         <p>
+            <label for="bebidasAlcoholicas">Bebidas Alcoh&oacute;licas:</label>
+            <form:select id="bebidasAlcoholicas" path="bebidasAlcoholicas" >
+	            <option value="false">No</option>
+	            <option value="true">S&iacute;</option>
+            </form:select>
+        </p>
+            <p id="buttons">
             <input id="reset" type="reset" tabindex="4">
             <input id="submit" type="submit" tabindex="5" 
                 value="Anadir Cliente">
         </p>
+     </div>
+        
+    
     </fieldset>
 </form:form>
 </div>

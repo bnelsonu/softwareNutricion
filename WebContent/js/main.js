@@ -12,11 +12,13 @@ $(document).ready(function() {
 	        if($("#btnTelefonosAlternativos").html() == "+"){
 	        	
 	        	$("#btnTelefonosAlternativos").html("-");
-	        }
+	        	$("#lbtelefono1").html("Tel&eacute;fono 1:");
 	        
+	        }
 	        else{
-	        	
+	    
 	        	$("#btnTelefonosAlternativos").html("+");
+	        	$("#lbtelefono1").html("Tel&eacute;fono:");
 	        }  
 	});
 	

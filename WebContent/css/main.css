@@ -1,22 +1,28 @@
 #global {
     text-align: left;
     border: 1px solid #dedede;
-    background: #efefef;
-    width: 560px;
+    width: 1024px;
     padding: 20px;
     margin: 100px auto;
 }
 
 form {
   font:100% verdana;
-  min-width: 500px;
-  max-width: 600px;
-  width: 560px;
+ 
+  width: 1024px;
+}
+#bloque1{
+	float:left;
 }
 
+#bloque2{
+	float: right;
+}
+
+
 form fieldset {
-  border-color: #bdbebf;
-  border-width: 3px;
+  border-color: #ccff00;
+  border-width: 1px;
   margin: 0;
 }
 
