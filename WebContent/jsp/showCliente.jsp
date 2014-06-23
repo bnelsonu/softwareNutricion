@@ -49,7 +49,7 @@
             <form:input id="correo" path="correo"/>
         </p>          
    	    <p>
-           <label id= "lbtelefono1" for="telefono1">Tel&eacute;fono</label>
+           <label id= "lbtelefono1" for="telefono1">Tel&eacute;fono:</label>
            <form:input id="telefono1" path="telefonos[0].numeroTelefono" />
             <form:button id="btnTelefonosAlternativos" type="button" class="alternativeBtns" >+</form:button>
         </p> 
@@ -84,10 +84,12 @@
      </div>
      
      <div id="bloque2">
-     	   <p>
-            <label for="nombre">Nombre: </label>
-            <form:input id="nombre" path="nombre"/>
-        </p>
+     	<p>
+             <label for="estiloVida">Estilo de Vida:</label>
+    		<form:select id="estiloVida" path="estiloVida" >
+				<form:options items="${estilosDeVida}" />
+			</form:select>
+        </p> 
         <p>
             <label for="apellido1">Primer Apellido: </label>
             <form:input id="apellido1" path="apellido1"/>
@@ -103,7 +105,6 @@
         <p>
              <label for="nacionalidad">Nacionalidad:</label>
     		<form:select id="nacionalidad" path="nacionalidad" >
-
 				<form:options items="${nacionalidades}" />
 			</form:select>
         </p>
@@ -128,14 +129,21 @@
             </form:select>
         </p>
       
-            <p id="buttons">
-            <input id="reset" type="reset" tabindex="4">
-            <input id="submit" type="submit" tabindex="5" 
-                value="Anadir Cliente">
-        </p>
+       
      </div>
-     
-    
+     <div id="bloque3">
+     	<label for="ejercicios">Ejercicios/Aficiones/Deportes:</label>
+     	<div>
+     		<form:checkboxes  id="ejercicios" items="${ejercicios}" path="ejercicios"/>
+     	</div>
+       
+     </div>
+     <div id="bloque4">
+      <p id="buttons">
+            <input id="reset" type="reset" tabindex="4">
+            <input id="submit" type="submit" tabindex="5" value="Anadir Cliente">
+        </p>
+    </div>
     </fieldset>
 </form:form>
 </div>

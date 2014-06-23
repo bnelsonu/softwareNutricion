@@ -1,10 +1,15 @@
 package com.nutricion.utils;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Utils {
 
- public enum nacionalidades{Costarricense,Estadounidense,Nicaraguense, Panameño, Hondureño, Salvadoreño, Guatemalteco};
+public enum nacionalidades{Costarricense,Estadounidense,Nicaraguense, Panameño, Hondureño, Salvadoreño, Guatemalteco};
 
- public enum  ejercicios {futbol,basketball,natacion,yoga,pilates,crossfit,aerobicos,ciclismo,spinning,
-	 atletismo};
+public static List <String> ejercicios = Arrays.asList("fútbol","basketball","natación","yoga","pilates","crossfit","aeróbicos",
+		"ciclismo","spinning","atletismo","patinaje","artes marciales","tennis","baseball","triatlón","pesas")  ;
+
+public enum estilosDeVida {Activo,Sedentario};
 	
 }

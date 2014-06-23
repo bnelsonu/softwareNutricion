@@ -29,8 +29,9 @@ public class ClienteController {
 	    public String showCliente(Model model, Cliente cliente) {
 		 	
 		 	model.addAttribute("nacionalidades",Utils.nacionalidades.values());
-		 	model.addAttribute("ejercicios",Utils.ejercicios.values());
+		 	model.addAttribute("ejercicios",Utils.ejercicios);
 		    model.addAttribute("cliente",new Cliente());
+		    model.addAttribute("estilosDeVida",Utils.estilosDeVida.values());
 		   
 		    return "showCliente";
 	    }

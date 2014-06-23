@@ -8,38 +8,84 @@
 
 form {
   font:100% verdana;
- 
   width: 1024px;
 }
-#bloque1{
-	float:left;
-	padding-right: 10px;
-	padding-left: 10px;
-}
-
-#bloque2{
-	float: right;
-	padding-right: 20px;
-}
-
 
 form fieldset {
   border-color: #ccff00;
   border-width: 1px;
   margin: 0;
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-legend {
-    font-size: 1.3em;
+#bloque1{
+	float:left;
+	padding-right: 10px;
+	padding-left: 20px;
+	border: solid 1px #FF0080;
+	padding-bottom: 20px; 
 }
 
-form label { 
+#bloque2{
+	float: right;
+	padding-right: 20px;
+	border: solid 1px #8FA1D8;
+	padding-bottom: 20px; 
+	
+}
+
+form #bloque1 label, form #bloque2 label { 
     width: 150px;
     display: block;
     float: left;
     text-align: left;
     padding: 10px;
     padding-left: 25px;
+}
+
+#bloque3{
+	float: left;
+	margin: 20px 100px 0 80px;
+}
+
+#bloque3 label{
+	text-align: left;
+	
+}
+
+form #bloque3 div span {
+margin-right: 13px;
+}
+
+
+
+form #bloque3 div span input {
+margin-right: 13px;
+}
+
+
+#bloque3 div{
+	
+	margin-top: 20px;
+	display: block;
+}
+
+
+
+#bloque4{
+	float: right;
+	padding-right: 80px;
+}
+
+
+legend {
+    font-size: 1.3em;
+}
+
+#ejercicios {
+  text-align:right !important;
 }
 
 table td {
