@@ -14,7 +14,7 @@
 <div id="global">
 <form:form action="saveCliente" commandName="cliente" method="post">
     <fieldset>
-        <legend>A&ntilde;adir Cliente</legend>
+        <legend>Datos Generales</legend>
        
        <div id="bloque1">
         <p>
@@ -79,6 +79,8 @@
 	            <option value="true">S&iacute;</option>
             </form:select>
         </p>
+      
+
      </div>
      
      <div id="bloque2">
@@ -125,13 +127,14 @@
 	            <option value="true">S&iacute;</option>
             </form:select>
         </p>
+      
             <p id="buttons">
             <input id="reset" type="reset" tabindex="4">
             <input id="submit" type="submit" tabindex="5" 
                 value="Anadir Cliente">
         </p>
      </div>
-        
+     
     
     </fieldset>
 </form:form>

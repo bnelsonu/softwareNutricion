@@ -3,7 +3,7 @@
     border: 1px solid #dedede;
     width: 1024px;
     padding: 20px;
-    margin: 100px auto;
+    margin: 60px auto;
 }
 
 form {
@@ -13,10 +13,13 @@ form {
 }
 #bloque1{
 	float:left;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 #bloque2{
 	float: right;
+	padding-right: 20px;
 }
 
 
@@ -31,11 +34,12 @@ legend {
 }
 
 form label { 
-    width: 250px;
+    width: 150px;
     display: block;
     float: left;
-    text-align: right;
-    padding: 2px;
+    text-align: left;
+    padding: 10px;
+    padding-left: 25px;
 }
 
 table td {

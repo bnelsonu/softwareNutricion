@@ -21,10 +21,6 @@ $(document).ready(function() {
 	        	$("#lbtelefono1").html("Tel&eacute;fono:");
 	        }  
 	});
-	
-	
-	
-	
 });
 
 	
