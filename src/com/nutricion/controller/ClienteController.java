@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.nutricion.domain.Cliente;
 import com.nutricion.service.ClienteService;
+import com.nutricion.service.EjercicioService;
 import com.nutricion.utils.Utils;
 
 
@@ -16,22 +17,29 @@ public class ClienteController {
 
     @Autowired
 	private ClienteService clienteService;
+    
+    @Autowired
+    private EjercicioService ejercicioService;
 
 	
 	@RequestMapping(value = "/saveCliente")
-    public String saveCliente(@ModelAttribute Cliente cliente) {
+    public String saveCliente(@ModelAttribute Cliente cliente, Model model) {
 		
+		model.addAttribute("nacionalidades",Utils.nacionalidades.values());
+	 	model.addAttribute("ejerciciosList",ejercicioService.getAllEjercicios());
+	 	model.addAttribute("estilosDeVida",Utils.estilosDeVida.values());
 		clienteService.saveCliente(cliente);
-        return "showCliente";
+        return "redirect:showCliente";
     }
 	
 	 @RequestMapping(value = "/showCliente")
 	    public String showCliente(Model model, Cliente cliente) {
 		 	
 		 	model.addAttribute("nacionalidades",Utils.nacionalidades.values());
-		 	model.addAttribute("ejercicios",Utils.ejercicios);
+		 	model.addAttribute("ejerciciosList",ejercicioService.getAllEjercicios());
+		 	model.addAttribute("estilosDeVida",Utils.estilosDeVida.values());
 		    model.addAttribute("cliente",new Cliente());
-		    model.addAttribute("estilosDeVida",Utils.estilosDeVida.values());
+		   
 		   
 		    return "showCliente";
 	    }

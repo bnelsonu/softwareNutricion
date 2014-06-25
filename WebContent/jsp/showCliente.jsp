@@ -63,26 +63,21 @@
 	           <form:input id="telefono3" path="telefonos[2].numeroTelefono"/>
 	        </p>
 		</div>       
-             
-         <p>
+           <p>
             <label for="fumado">Fumado: </label>
             <form:select id="fumado" path="fumado" >
 	            <option value="false">No</option>
 	            <option value="true">S&iacute;</option>
             </form:select>
         </p>
-
-         <p>
+		<p>
             <label for="bebidasAlcoholicas">Bebidas Alcoh&oacute;licas:</label>
             <form:select id="bebidasAlcoholicas" path="bebidasAlcoholicas" >
 	            <option value="false">No</option>
 	            <option value="true">S&iacute;</option>
             </form:select>
         </p>
-      
-
      </div>
-     
      <div id="bloque2">
      	<p>
              <label for="estiloVida">Estilo de Vida:</label>
@@ -108,7 +103,6 @@
 				<form:options items="${nacionalidades}" />
 			</form:select>
         </p>
-        
         <p>
             <label for="ocupacion">Ocupaci&oacute;n: </label>
             <form:input id="ocupacion" path="ocupacion"/>
@@ -128,14 +122,17 @@
 	            <option value="true">S&iacute;</option>
             </form:select>
         </p>
-      
-       
      </div>
      <div id="bloque3">
      	<label for="ejercicios">Ejercicios/Aficiones/Deportes:</label>
-     	<div>
-     		<form:checkboxes  id="ejercicios" items="${ejercicios}" path="ejercicios"/>
-     	</div>
+     		<div>
+     	                 <c:forEach items="${ejerciciosList}"  var="ej" varStatus="counter">
+     	                 
+     	                 	<form:checkbox label="${ej.descripcion}" value="false" path="ejercicios[${counter.index}].descripcion"></form:checkbox>
+     	                 
+     	                 </c:forEach>
+     		
+     		</div>
        
      </div>
      <div id="bloque4">
