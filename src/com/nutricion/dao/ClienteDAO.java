@@ -5,4 +5,5 @@ import com.nutricion.domain.Cliente;
 public interface ClienteDAO {
 
 	public void saveCliente(Cliente cliente);
+	public int getLastClientId();
 }

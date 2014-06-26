@@ -35,6 +35,7 @@ public class ClienteController {
 	 @RequestMapping(value = "/showCliente")
 	    public String showCliente(Model model, Cliente cliente) {
 		 	
+		 	model.addAttribute("clienteId",clienteService.getLastClientId());
 		 	model.addAttribute("nacionalidades",Utils.nacionalidades.values());
 		 	model.addAttribute("ejerciciosList",ejercicioService.getAllEjercicios());
 		 	model.addAttribute("estilosDeVida",Utils.estilosDeVida.values());

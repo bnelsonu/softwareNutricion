@@ -126,14 +126,14 @@
      <div id="bloque3">
      	<label for="ejercicios">Ejercicios/Aficiones/Deportes:</label>
      		<div>
-     	                 <c:forEach items="${ejerciciosList}"  var="ej" varStatus="counter">
-     	                 
-     	                 	<form:checkbox label="${ej.descripcion}" value="false" path="ejercicios[${counter.index}].descripcion"></form:checkbox>
-     	                 
-     	                 </c:forEach>
-     		
+              <c:forEach items="${ejerciciosList}"  var="ej" varStatus="counter">
+              	<form:checkbox label="${ej.descripcion}" value="false" path=""></form:checkbox>
+              	
+              	<form:hidden path="clienteEjercicios[${counter.index}].cliente.codigoCliente" value="${codigoCliente}"/>
+              	<form:hidden path="clienteEjercicios[${counter.index}].ejercicio.codigoEjercicio" value="${ej.codigoEjercicio}"/>
+              	<c:out value="${codigoCliente}"></c:out>
+              </c:forEach>
      		</div>
-       
      </div>
      <div id="bloque4">
       <p id="buttons">

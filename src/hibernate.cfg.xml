@@ -14,11 +14,12 @@
         <property name="connection.pool_size">1</property>
         <property name="dialect">org.hibernate.dialect.PostgreSQLDialect</property>
         <property name="show_sql">true</property>
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
   
 	    <mapping class="com.nutricion.domain.AlimentacionaEvaluar"/>
 	    <mapping class="com.nutricion.domain.Alimento"/>
 		<mapping class="com.nutricion.domain.Cliente"/>
+		<mapping class="com.nutricion.domain.ClienteEjercicio"/>
 	    <mapping class="com.nutricion.domain.ConductasRelSalud"/>
 	    <mapping class="com.nutricion.domain.DietaPrevia"/>
 	    <mapping class="com.nutricion.domain.Ejercicio"/>

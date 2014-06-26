@@ -20,7 +20,7 @@ import javax.persistence.Table;
 @Table(name="CLIENTE")
 public class Cliente {
 
-	@Id @GeneratedValue (strategy=GenerationType.IDENTITY)
+	@Id 
 	@Column(name="CODIGO_CLIENTE")
 	private int codigoCliente;
 	@Column(name="NOMBRE")
@@ -73,17 +73,16 @@ public class Cliente {
    	@JoinTable (name="CLIENTE_SUPLEMENTO", joinColumns=@JoinColumn(name="CODIGO_CLIENTE"),
    	inverseJoinColumns=@JoinColumn(name="CODIGO_SUPLEMENTO"))
     private Collection <Suplemento> suplementos = new ArrayList <Suplemento> ();
-	
-    @ManyToMany(cascade=CascadeType.ALL)
-   	@JoinTable (name="CLIENTE_EJERCICIO", joinColumns=@JoinColumn(name="CODIGO_CLIENTE"),
-   	inverseJoinColumns=@JoinColumn(name="CODIGO_EJERCICIO"))
-	private Collection <Ejercicio> ejercicios = new ArrayList <Ejercicio> ();
-	
+    
 	@OneToMany(mappedBy="cliente")
 	private Collection <DietaPrevia> dietasPrevias = new ArrayList <DietaPrevia> ();
 	
 	@OneToMany(mappedBy="cliente")
 	private Collection <Meta> metas = new ArrayList <Meta> ();
+	
+	@OneToMany(mappedBy="cliente")
+	private Collection <ClienteEjercicio> clienteEjercicios = new ArrayList<ClienteEjercicio> ();
+	
 	
 	public int getCodigoCliente() {
 		return codigoCliente;
@@ -201,12 +200,7 @@ public class Cliente {
 	public void setMedicamentos(Collection<Medicamento> medicamentos) {
 		this.medicamentos = medicamentos;
 	}
-	public Collection<Ejercicio> getEjercicios() {
-		return ejercicios;
-	}
-	public void setEjercicios(Collection<Ejercicio> ejercicios) {
-		this.ejercicios = ejercicios;
-	}
+
 	public Collection<DietaPrevia> getDietasPrevias() {
 		return dietasPrevias;
 	}
@@ -230,5 +224,11 @@ public class Cliente {
 	}
 	public void setSuplementos(Collection<Suplemento> suplementos) {
 		this.suplementos = suplementos;
+	}
+	public Collection<ClienteEjercicio> getClienteEjercicios() {
+		return clienteEjercicios;
+	}
+	public void setClienteEjercicios(Collection<ClienteEjercicio> clienteEjercicios) {
+		this.clienteEjercicios = clienteEjercicios;
 	}
 }

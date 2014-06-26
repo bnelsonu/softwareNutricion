@@ -19,4 +19,11 @@ public class ClienteServiceImpl implements ClienteService{
 	public void saveCliente(Cliente cliente){
 		clienteDAO.saveCliente(cliente);
 	}
+
+	@Override
+	@Transactional
+	public int getLastClientId() {
+		
+		return clienteDAO.getLastClientId();
+	}
 }

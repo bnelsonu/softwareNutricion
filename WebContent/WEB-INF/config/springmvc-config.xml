@@ -46,6 +46,7 @@
   <property name="annotatedClasses">  
    <list>  
    	   <value>com.nutricion.domain.Cliente</value>
+   	   <value>com.nutricion.domain.ClienteEjercicio</value>
    	   <value>com.nutricion.domain.Telefono</value>
    	   <value>com.nutricion.domain.AlimentacionaEvaluar</value>
 	   <value>com.nutricion.domain.Alimento</value>

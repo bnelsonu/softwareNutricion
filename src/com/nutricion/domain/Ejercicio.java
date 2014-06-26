@@ -8,9 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -24,13 +22,10 @@ public class Ejercicio {
 	private String tipo;
 	@Column(name="DESCRIPCION")
 	private String descripcion;
+	
+	@OneToMany(mappedBy="ejercicio")
+	private Collection <ClienteEjercicio> clienteEjercicios = new ArrayList<ClienteEjercicio> ();
 
-	@ManyToMany
-	@JoinTable (name="CLIENTE_EJERCICIO", joinColumns=@JoinColumn(name="CODIGO_EJERCICIO"),
-	inverseJoinColumns=@JoinColumn(name="CODIGO_CLIENTE"))
-	private Collection <Cliente> clientes = new ArrayList <Cliente> ();
-	
-	
 	public int getCodigoEjercicio() {
 		return codigoEjercicio;
 	}
@@ -49,10 +44,10 @@ public class Ejercicio {
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
-	public Collection<Cliente> getClientes() {
-		return clientes;
+	public Collection<ClienteEjercicio> getClienteEjercicios() {
+		return clienteEjercicios;
 	}
-	public void setClientes(Collection<Cliente> clientes) {
-		this.clientes = clientes;
+	public void setClienteEjercicios(Collection<ClienteEjercicio> clienteEjercicios) {
+		this.clienteEjercicios = clienteEjercicios;
 	}
 }
