@@ -128,10 +128,8 @@
      		<div>
               <c:forEach items="${ejerciciosList}"  var="ej" varStatus="counter">
               	<form:checkbox label="${ej.descripcion}" value="false" path=""></form:checkbox>
-              	
-              	<form:hidden path="clienteEjercicios[${counter.index}].cliente.codigoCliente" value="${codigoCliente}"/>
+              	<form:hidden path="clienteEjercicios[${counter.index}].cliente.codigoCliente" value="${clienteId}"/>
               	<form:hidden path="clienteEjercicios[${counter.index}].ejercicio.codigoEjercicio" value="${ej.codigoEjercicio}"/>
-              	<c:out value="${codigoCliente}"></c:out>
               </c:forEach>
      		</div>
      </div>

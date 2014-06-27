@@ -1,6 +1,6 @@
 package com.nutricion.dao;
 
-import javax.persistence.Query;
+import org.hibernate.Query;
 
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,12 +23,16 @@ public class ClienteDAOImpl implements ClienteDAO{
 
 	@Override
 	public int getLastClientId() {
-		Query getLastIdQy = (Query) sessionFactory.getCurrentSession().createQuery("select max(CODIGO_CLIENTE) from CLIENTE");
 		
-		if(getLastIdQy == null){
+		
+		String query = "select max(codigoCliente) from Cliente";
+		
+		Query getLastIdQy = sessionFactory.getCurrentSession().createQuery(query);
+		
+		if(getLastIdQy.list().get(0) == null){
 			return 1;
 		}
 		else
-			return (int) getLastIdQy.getSingleResult();
+			return (int) getLastIdQy.uniqueResult()+1;
 	}
 }
