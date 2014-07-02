@@ -3,6 +3,7 @@ package com.nutricion.domain;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -23,7 +24,7 @@ public class Ejercicio {
 	@Column(name="DESCRIPCION")
 	private String descripcion;
 	
-	@OneToMany(mappedBy="ejercicio")
+	@OneToMany(mappedBy="ejercicio" , cascade = CascadeType.ALL)
 	private Collection <ClienteEjercicio> clienteEjercicios = new ArrayList<ClienteEjercicio> ();
 
 	public int getCodigoEjercicio() {

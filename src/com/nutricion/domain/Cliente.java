@@ -78,7 +78,7 @@ public class Cliente {
 	@OneToMany(mappedBy="cliente")
 	private Collection <Meta> metas = new ArrayList <Meta> ();
 	
-	@OneToMany(mappedBy="cliente")
+	@OneToMany(mappedBy="cliente", cascade = CascadeType.ALL)
 	private Collection <ClienteEjercicio> clienteEjercicios = new ArrayList<ClienteEjercicio> ();
 	
 	

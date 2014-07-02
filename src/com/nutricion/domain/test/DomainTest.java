@@ -105,8 +105,8 @@ public class DomainTest {
 		ejercicio2.setDescripcion("natacion");
 		ejercicio2.setTipo("Deporte");
 		
-		cliente.getEjercicios().add(ejercicio1);
-		cliente.getEjercicios().add(ejercicio2);
+		/*cliente.getEjercicios().add(ejercicio1);
+		cliente.getEjercicios().add(ejercicio2);*/
 		
 		//13.Frecuencia de Ejercicio
 		cliente.setFrecuenciaEjercicio("4 veces a la semana");

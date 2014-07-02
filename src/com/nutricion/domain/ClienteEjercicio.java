@@ -2,8 +2,6 @@ package com.nutricion.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -12,7 +10,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="CLIENTE_EJERCICIO")
 public class ClienteEjercicio {
-	@Id @GeneratedValue (strategy=GenerationType.IDENTITY)
+	@Id 
 	@Column(name="CLIENTE_EJERCICIO_ID")
 	private int clienteEjercicioId;
 	 

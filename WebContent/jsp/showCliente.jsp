@@ -6,7 +6,7 @@
 <head>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
-<script src="/SoftwareNutricion/js/main.js"> </script>
+<script src="/SoftwareNutricion2/js/main.js"> </script>
 <style type="text/css">@import url("<c:url value="/css/main.css"/>");</style>
 <title>Anadir Cliente</title>
 </head>
@@ -19,7 +19,9 @@
        <div id="bloque1">
         <p>
             <label for="nombre">Nombre: </label>
+            
             <form:input id="nombre" path="nombre"/>
+            <form:hidden path="codigoCliente" value="${clienteId}"/>
         </p>
         <p>
             <label for="apellido1">Primer Apellido: </label>
@@ -85,51 +87,18 @@
 				<form:options items="${estilosDeVida}" />
 			</form:select>
         </p> 
-        <p>
-            <label for="apellido1">Primer Apellido: </label>
-            <form:input id="apellido1" path="apellido1"/>
-        </p>
-       <p>
-            <label for="apellido2">Segundo Apellido: </label>
-            <form:input id="apellido2" path="apellido2"/>
-        </p>
-        <p>
-            <label for="edad">Edad: </label>
-            <form:input id="edad" path="edad"/>
-        </p>
-        <p>
-             <label for="nacionalidad">Nacionalidad:</label>
-    		<form:select id="nacionalidad" path="nacionalidad" >
-				<form:options items="${nacionalidades}" />
-			</form:select>
-        </p>
-        <p>
-            <label for="ocupacion">Ocupaci&oacute;n: </label>
-            <form:input id="ocupacion" path="ocupacion"/>
-        </p>                   
-         <p>
-            <label for="fumado">Fumado: </label>
-            <form:select id="fumado" path="fumado" >
-	            <option value="false">No</option>
-	            <option value="true">S&iacute;</option>
-            </form:select>
-        </p>
-
-         <p>
-            <label for="bebidasAlcoholicas">Bebidas Alcoh&oacute;licas:</label>
-            <form:select id="bebidasAlcoholicas" path="bebidasAlcoholicas" >
-	            <option value="false">No</option>
-	            <option value="true">S&iacute;</option>
-            </form:select>
-        </p>
+        
      </div>
      <div id="bloque3">
      	<label for="ejercicios">Ejercicios/Aficiones/Deportes:</label>
      		<div>
               <c:forEach items="${ejerciciosList}"  var="ej" varStatus="counter">
               	<form:checkbox label="${ej.descripcion}" value="false" path=""></form:checkbox>
+              	<form:hidden path="clienteEjercicios[${counter.index}].clienteEjercicioId" value="${clienteEjercicioId + counter.index}"/>
               	<form:hidden path="clienteEjercicios[${counter.index}].cliente.codigoCliente" value="${clienteId}"/>
               	<form:hidden path="clienteEjercicios[${counter.index}].ejercicio.codigoEjercicio" value="${ej.codigoEjercicio}"/>
+              	<form:hidden path="clienteEjercicios[${counter.index}].ejercicio.descripcion" value="${ej.descripcion}"/>
+              	<form:hidden path="clienteEjercicios[${counter.index}].ejercicio.tipo" value="${ej.tipo}"/>
               </c:forEach>
      		</div>
      </div>
