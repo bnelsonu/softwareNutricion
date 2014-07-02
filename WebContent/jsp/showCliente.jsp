@@ -6,7 +6,7 @@
 <head>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"> </script>
-<script src="/SoftwareNutricion2/js/main.js"> </script>
+<script src="/SoftwareNutricion/js/main.js"> </script>
 <style type="text/css">@import url("<c:url value="/css/main.css"/>");</style>
 <title>Anadir Cliente</title>
 </head>
