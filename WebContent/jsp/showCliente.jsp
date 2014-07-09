@@ -42,7 +42,47 @@
 				<form:options items="${nacionalidades}" />
 			</form:select>
         </p> 
-        <p>
+        <%-- <p>
+            <label for="ocupacion">Ocupaci&oacute;n: </label>
+            <form:input id="ocupacion" path="ocupacion"/>
+        </p>
+         <p>
+            <label for="correo">Correo: </label>
+            <form:input id="correo" path="correo"/>
+        </p>          
+   	    <p>
+           <label id= "lbtelefono1" for="telefono1">Tel&eacute;fono:</label>
+           <form:input id="telefono1" path="telefonos[0].numeroTelefono" />
+            <form:button id="btnTelefonosAlternativos" type="button" class="alternativeBtns" >+</form:button>
+        </p> 
+	    <div id="telefonosAlternativos" class="hidden">
+	        <p>
+	           <label for="telefono2">Tel&eacute;fono 2: </label>
+	           <form:input id="telefono2" path="telefonos[1].numeroTelefono"/>
+	        </p>
+	        <p>
+	           <label for="telefono3">Tel&eacute;fono 3: </label>
+	           <form:input id="telefono3" path="telefonos[2].numeroTelefono"/>
+	        </p>
+		</div>       
+           <p>
+            <label for="fumado">Fumado: </label>
+            <form:select id="fumado" path="fumado" >
+	            <option value="false">No</option>
+	            <option value="true">S&iacute;</option>
+            </form:select>
+        </p>
+		<p>
+            <label for="bebidasAlcoholicas">Bebidas Alcoh&oacute;licas:</label>
+            <form:select id="bebidasAlcoholicas" path="bebidasAlcoholicas" >
+	            <option value="false">No</option>
+	            <option value="true">S&iacute;</option>
+            </form:select>
+        </p> --%>
+     </div>
+     <div id="bloque2">
+     
+      <p>
             <label for="ocupacion">Ocupaci&oacute;n: </label>
             <form:input id="ocupacion" path="ocupacion"/>
         </p>
@@ -79,14 +119,13 @@
 	            <option value="true">S&iacute;</option>
             </form:select>
         </p>
-     </div>
-     <div id="bloque2">
-     	<p>
+     
+     <%-- 	<p>
              <label for="estiloVida">Estilo de Vida:</label>
     		<form:select id="estiloVida" path="estiloVida" >
 				<form:options items="${estilosDeVida}" />
 			</form:select>
-        </p> 
+        </p>  --%>
         
      </div>
      <div id="bloque3">

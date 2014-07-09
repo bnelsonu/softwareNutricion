@@ -48,6 +48,8 @@ form #bloque1 label, form #bloque2 label {
 #bloque3{
 	float: left;
 	margin: 20px 100px 0 80px;
+	padding-right: 10px;
+	padding-left: 20px;
 }
 
 #bloque3 label{
